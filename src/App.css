@@ -1,0 +1,11 @@
+.container {
+  max-width: 95%;
+  width: 600px;
+  margin: 2rem auto;
+  font-family: sans-serif;
+  padding: 1rem;
+}
+
+.title {
+  text-align: center;
+}

@@ -1,0 +1,16 @@
+.error-display {
+  color: red;
+  margin-top: 1rem;
+  background-color: #ffe6e6;
+  padding: 0.5rem;
+  border: 1px solid red;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 600px) {
+  .npv-form input,
+  .npv-form .submit-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

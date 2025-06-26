@@ -1,0 +1,33 @@
+.npv-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.npv-form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.npv-form .cash-flows label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.npv-form .cash-flows input {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.npv-form .submit-button {
+  padding: 0.6rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.npv-form .submit-button:hover {
+  background-color: #0056b3;
+}
