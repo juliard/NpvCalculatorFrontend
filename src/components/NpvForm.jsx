@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './NpvForm.css';
+import "./NpvForm.css";
 
 function NpvForm({ onSubmit }) {
   const [form, setForm] = useState({
@@ -26,39 +26,41 @@ function NpvForm({ onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        placeholder="Initial Investment"
-        type="number"
-        value={form.initialInvestment}
-        onChange={(e) =>
-          setForm({ ...form, initialInvestment: e.target.value })
-        }
-        required
-      />
-      <input
-        placeholder="Lower Bound Rate (%)"
-        type="number"
-        value={form.lowerBoundRate}
-        onChange={(e) => setForm({ ...form, lowerBoundRate: e.target.value })}
-        required
-      />
-      <input
-        placeholder="Upper Bound Rate (%)"
-        type="number"
-        value={form.upperBoundRate}
-        onChange={(e) => setForm({ ...form, upperBoundRate: e.target.value })}
-        required
-      />
-      <input
-        placeholder="Rate Increment (%)"
-        type="number"
-        value={form.increment}
-        onChange={(e) => setForm({ ...form, increment: e.target.value })}
-        required
-      />
+    <form className="npv-form" onSubmit={handleSubmit}>
+      <div className="form-group">
+        <input
+          placeholder="Initial Investment"
+          type="number"
+          value={form.initialInvestment}
+          onChange={(e) =>
+            setForm({ ...form, initialInvestment: e.target.value })
+          }
+          required
+        />
+        <input
+          placeholder="Lower Bound Rate (%)"
+          type="number"
+          value={form.lowerBoundRate}
+          onChange={(e) => setForm({ ...form, lowerBoundRate: e.target.value })}
+          required
+        />
+        <input
+          placeholder="Upper Bound Rate (%)"
+          type="number"
+          value={form.upperBoundRate}
+          onChange={(e) => setForm({ ...form, upperBoundRate: e.target.value })}
+          required
+        />
+        <input
+          placeholder="Rate Increment (%)"
+          type="number"
+          value={form.increment}
+          onChange={(e) => setForm({ ...form, increment: e.target.value })}
+          required
+        />
+      </div>
 
-      <div>
+      <div className="cash-flows">
         <label>Cash Flows:</label>
         {form.cashFlows.map((cf, idx) => (
           <input
@@ -74,7 +76,9 @@ function NpvForm({ onSubmit }) {
         </button>
       </div>
 
-      <button type="submit">Calculate</button>
+      <button className="submit-button" type="submit">
+        Calculate
+      </button>
     </form>
   );
 }
